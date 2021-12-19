@@ -1,0 +1,13 @@
+BasedOnStyle: "Google"
+Language: Cpp
+ColumnLimit: 80
+UseTab: Never
+IndentWidth: 2
+TabWidth: 2
+DerivePointerAlignment: false
+PointerAlignment: Left
+BreakBeforeBraces: Attach
+AllowShortFunctionsOnASingleLine: Inline
+IndentCaseLabels: false
+FixNamespaceComments: false
+
