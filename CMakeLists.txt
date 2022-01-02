@@ -41,6 +41,7 @@ if(${GOOGLETEST_PATH} STREQUAL "GOOGLETEST_PATH-NOTFOUND")
   endif()
 endif()
 
+set(BUILD_GMOCK)
 add_subdirectory(googletest)
 
 #*******************************************************************************
@@ -51,6 +52,7 @@ set(SOURCES_FILES
 #*******************************************************************************
 set(TEST_FILES
   tst/tst_simple.cpp
+  tst/tst_busnes_logic.cpp
 )
 
 #*******************************************************************************
@@ -63,7 +65,7 @@ add_test(NAME Test_EXAMPLE_GOOGLETESTS COMMAND ${PROJECT_LABEL})
 
 target_link_libraries(${PROJECT_LABEL} PRIVATE
   Threads::Threads
-  gtest gtest_main
+  gtest gtest_main gmock gmock_main
 )
 
 target_compile_definitions(${PROJECT_LABEL} PRIVATE
